@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#include <Rcpp.h>\n#include \"oligotm.h\"\n#include <string.h>\nusing namespace Rcpp;\nusing namespace std;\n\n// This is a simple function using Rcpp that creates an R list\n// containing a character vector and a numeric vector.\n//\n// Learn more about how to use Rcpp at:\n//\n//   http://www.rcpp.org/\n//   http://adv-r.had.co.nz/Rcpp.html\n//\n// and browse examples of code using Rcpp at:\n//\n//   http://gallery.rcpp.org/\n//\n\n// [[Rcpp::export]]\n\nList rcpp_hello() {\n  CharacterVector x = CharacterVector::create(\"foo\", \"bar\");\n  NumericVector y   = NumericVector::create(0.0, 1.0);\n  List z            = List::create(x, y);\n  return z;\n}\n\n\ndouble vacc3a(double age, bool female, bool ily=true){\n  double p = 0.25 + 0.3 * 1 / (1 - exp(0.04 * age)) + 0.1 * ily;\n  p = p * (female ? 1.25 : 0.75);\n  p = std::max(p, 0.0);\n  p = std::min(p, 1.0);\n  return p;\n}\n\n// [[Rcpp::export]]\nNumericVector calcTm(CharacterVector seq,\n               double dna_conc = 50,\n               double salt_conc = 50,\n               double divalent_conc = 0,\n               double dntp_conc = 0,\n               int tm_method = 0,\n               int salt_corrections = 0\n){\n  int n = seq.size();\n  vector< string > seqs = as< vector< string > >(seq);\n\n  NumericVector out(n);\n\n  for(int i = 0; i < n; ++i) {\n    string seq_i = seqs[i];\n    char * cstr = new char[seq_i.size() + 1];\n    strcpy(cstr, seq_i.c_str());\n    //tm = oligotm(seq, d, mv, dv, n, (tm_method_type) tm_santalucia, (salt_correction_type) salt_corrections);\n    out[i] = oligotm(cstr, dna_conc, salt_conc, divalent_conc, dntp_conc, tm_method, salt_corrections);\n    delete [] cstr;\n  }\n\n  return out;\n}\n\nNumericVector di_to_mo(NumericVector divalent, double dntp) {\n  int n = divalent.size();\n  NumericVector out(n);\n  for(int i = 0; i < n; ++i) {\n    out[i] = divalent_to_monovalent(divalent[i], dntp);\n  }\n\n  return out;\n}\n\nNumericVector vacc3(NumericVector age, LogicalVector female,\n                    LogicalVector ily) {\n  int n = age.size();\n  NumericVector out(n);\n\n  for(int i = 0; i < n; ++i) {\n    out[i] = vacc3a(age[i], female[i], ily[i]);\n  }\n\n  return out;\n}\n",
+    "created" : 1480064389944.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "204278648",
+    "id" : "4234C9ED",
+    "lastKnownWriteTime" : 1480070334,
+    "last_content_update" : 1480070334428,
+    "path" : "~/src/oligo/src/rcpp_hello.cpp",
+    "project_path" : "src/rcpp_hello.cpp",
+    "properties" : {
+        "marks" : "<:0,0\n>:0,0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "cpp"
+}

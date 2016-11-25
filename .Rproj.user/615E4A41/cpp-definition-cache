@@ -1,0 +1,128 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 5,
+                "file" : "/Users/fb/src/oligo/src/oligotm.c",
+                "kind" : 6,
+                "line" : 310,
+                "name" : "oligotm(const char *, double, double, double, double, int, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@oligotm"
+            },
+            {
+                "column" : 1,
+                "file" : "/Users/fb/src/oligo/src/oligotm.c",
+                "kind" : 6,
+                "line" : 529,
+                "name" : "oligodg(const char *, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@oligodg"
+            },
+            {
+                "column" : 8,
+                "file" : "/Users/fb/src/oligo/src/oligotm.c",
+                "kind" : 6,
+                "line" : 592,
+                "name" : "end_oligodg(const char *, int, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@end_oligodg"
+            },
+            {
+                "column" : 8,
+                "file" : "/Users/fb/src/oligo/src/oligotm.c",
+                "kind" : 6,
+                "line" : 609,
+                "name" : "seqtm(const char *, double, double, double, double, int, tm_method_type, salt_correction_type)",
+                "parent_name" : "",
+                "usr" : "c:@F@seqtm"
+            },
+            {
+                "column" : 1,
+                "file" : "/Users/fb/src/oligo/src/oligotm.c",
+                "kind" : 6,
+                "line" : 638,
+                "name" : "long_seq_tm(const char *, int, int, double, double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@long_seq_tm"
+            },
+            {
+                "column" : 5,
+                "file" : "/Users/fb/src/oligo/src/oligotm.c",
+                "kind" : 6,
+                "line" : 670,
+                "name" : "symmetry(const char *)",
+                "parent_name" : "",
+                "usr" : "c:@F@symmetry"
+            },
+            {
+                "column" : 8,
+                "file" : "/Users/fb/src/oligo/src/oligotm.c",
+                "kind" : 6,
+                "line" : 705,
+                "name" : "divalent_to_monovalent(double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@divalent_to_monovalent"
+            }
+        ],
+        "file" : "/Users/fb/src/oligo/src/oligotm.c",
+        "file_last_write" : 1480068761
+    },
+    {
+        "definitions" : [
+        ],
+        "file" : "/Users/fb/src/oligo/src/oligotm.h",
+        "file_last_write" : 1480067850
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 6,
+                "file" : "/Users/fb/src/oligo/src/rcpp_hello.cpp",
+                "kind" : 6,
+                "line" : 22,
+                "name" : "rcpp_hello",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpp_hello#"
+            },
+            {
+                "column" : 8,
+                "file" : "/Users/fb/src/oligo/src/rcpp_hello.cpp",
+                "kind" : 6,
+                "line" : 30,
+                "name" : "vacc3a(double, bool, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@vacc3a#d#b#b#"
+            },
+            {
+                "column" : 15,
+                "file" : "/Users/fb/src/oligo/src/rcpp_hello.cpp",
+                "kind" : 6,
+                "line" : 39,
+                "name" : "calcTm(CharacterVector, double, double, double, double, int, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@calcTm#$@N@Rcpp@C@Vector>#VI16#@N@Rcpp@CT>1#T@PreserveStorage#d#d#d#d#I#I#"
+            },
+            {
+                "column" : 15,
+                "file" : "/Users/fb/src/oligo/src/rcpp_hello.cpp",
+                "kind" : 6,
+                "line" : 64,
+                "name" : "di_to_mo(NumericVector, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@di_to_mo#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#d#"
+            },
+            {
+                "column" : 15,
+                "file" : "/Users/fb/src/oligo/src/rcpp_hello.cpp",
+                "kind" : 6,
+                "line" : 74,
+                "name" : "vacc3(NumericVector, LogicalVector, LogicalVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@vacc3#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#$@N@Rcpp@C@Vector>#VI10#@N@Rcpp@CT>1#T@PreserveStorage#S1_#"
+            }
+        ],
+        "file" : "/Users/fb/src/oligo/src/rcpp_hello.cpp",
+        "file_last_write" : 1480070334
+    }
+]
